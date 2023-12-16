@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3f1eb6d388.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/aayush.png" alt="logo" id="aayush"> 
+                <ul>
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#header">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>cs undergrad</p>
+                <h1>hi, i am <span>aayush</span>, a cs major.<br> 
+                    currently i am learning unity engine and game development.
+        
+                </h1>
+            </div>
+        </div>
+    </div>
+<!-- -----about------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/quicksilver.jpg" alt="just an image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">ABOUT ME</h1>
+                    <p>hey, i am aayush prajapati from IIITA. currently a sophomore, tech enthusiast
+                        and a cs major. i am interested in game development and machine learning.
+                        i am currently learning unity engine and game development. i am also learning
+                        machine learning for fun. eager to know about exciting opportunities in the field
+                        of game development and machine learning.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tablinks active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tablinks" onclick="opentab('experience')">experience</p>
+                        <p class="tablinks" onclick="opentab('education')">education</p>
+                    </div>
+                    <div class="tabcont active-tab" id="skills">
+                        <ul>
+                            <li><span>game development</span><br>developing games</li>
+                            <li><span>ml enthusiast</span><br>learning ml for fun</li>
+                        </ul>
+                    </div>
+                    <div class="tabcont" id="experience">
+                        <ul>
+                            <li><span>game development</span><br>working on my first game</li>
+                            <li><span>ml enthusiast</span><br>build few ml models</li>
+                        </ul>
+                    </div>
+                    <div class="tabcont" id="education">
+                        <ul>
+                            <li><span>game development</span><br>self taught</li>
+                            <li><span>ml enthusiast</span><br>coursera courses by andrew ng</li>
+                            <li><span>undergrad</span><br>a sophomore at IIITA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------services------- -->
+    <div id="services">
+        <div class="container">
+                <h1 class="sub-title">My services</h1>
+                <div class="services-list">
+                    <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>machine learning</h2>
+                    <p>Embarking on my machine learning journey is a thrilling 
+                        exploration of algorithms and data. From grasping fundamentals to applying models, 
+                        every step offers insights into the vast field. Challenges are opportunities, and as I 
+                        navigate this evolving landscape, 
+                        the potential for innovation and problem-solving fuels my continuous learning.</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>game development</h2>
+                    <p>Embarking on my Unity game dev journey as
+                        a beginner is a blend of challenge and excitement. 
+                        Every code snippet and feature implemented feels like a triumph.
+                       With a steep learning curve, Unity's community and resources offer crucial support.
+                        Navigating C# scripting and game design,
+                        each project iteration marks progress in my evolving skills.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+<!-- --------contact------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+                    <p><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        ifi2022016@iiita.ac.in</p>
+                    <p><i class="fa-solid fa-phone"></i>012345678</p>
+                <div class="social-icons">
+                    <a href="instagram.com/_i._ash"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="github.com/thehackerash"><i class="fab fa-github"></i></a>
+                    <a href="discord.com"><i class="fab fa-discord"></i></a>
+                    <a href="linkedin.com"><i class="fab fa-linkedin"></i></a>
+                </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="your name" required>
+                        <input type="email" name="Email" placeholder="your email" required>
+                        <textarea name="Message" placeholder="your message" rows="6"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcont = document.getElementsByClassName("tabcont");
+
+        function opentab(tabName){
+            for(i=0; i<tablinks.length; i++){
+                tablinks[i].classList.remove("active-link");
+            }
+            for(i=0; i<tabcont.length; i++){
+                tabcont[i].classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
